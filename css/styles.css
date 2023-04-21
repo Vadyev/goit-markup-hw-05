@@ -209,9 +209,12 @@ img {
   position: fixed;
   top: 88px;
   left: 516px;
+  right: 516px;
   bottom: 12px;
   z-index: var(--modal-idx);
   background-color: var(--color-cornflower);
+  transition: opacity 200ms ease, visibility 200ms ease,
+    backdrop-filter 200ms ease;
 }
 .is-hidden {
   opacity: 0;
@@ -220,8 +223,9 @@ img {
 }
 .modal {
   position: absolute;
-  top: calc(50%-228px);
-  left: calc(50%-204px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 408px;
   min-height: 576px;
   background-color: var(--color-dairy);
@@ -229,14 +233,18 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 24px;
-  transform: opacity;
+  transition: transform 400ms ease-in 200ms, opacity 400ms ease-in 200ms;
 }
 .modal-btn {
   display: block;
   margin-left: auto;
+  border-radius: 50%;
+  background-color: var(--color-cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 24px;
+  height: 24px;
 }
-.modal-icon {
-}
+
 /* Our advantages */
 .advantages-section {
   padding: 120px 0;
@@ -395,6 +403,24 @@ img {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--color-ocean);
+  animation: shake 2s;
+}
+@keyframes shake {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10%,
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  20%,
+  40% {
+    transform: rotate(10deg);
+  }
 }
 /* Customers */
 .customers-section {
@@ -532,8 +558,6 @@ img {
   color: var(--color-cloud);
   text-align: left;
 }
-.overlay-portfolio {
-}
 
 .portfolio-link {
   display: block;
@@ -629,4 +653,22 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--color-green);
+  animation: shake 2s;
+}
+@keyframes shake {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10%,
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  20%,
+  40% {
+    transform: rotate(10deg);
+  }
 }
