@@ -83,6 +83,8 @@ img {
   display: block;
   padding: 24px 0;
   position: relative;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link::after {
   position: absolute;
@@ -93,6 +95,8 @@ img {
   width: 100%;
   height: 4px;
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link.current::after,
@@ -125,6 +129,8 @@ img {
   list-style: none;
   text-decoration: none;
   color: var(--color-navy-blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list .link:hover,
 .list .link:focus {
@@ -191,6 +197,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -375,6 +383,8 @@ img {
   background-color: var(--color-iris);
   border-radius: 50%;
   fill: var(--color-cloud);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -400,6 +410,8 @@ img {
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
   color: var(--color-light-slate);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -424,6 +436,8 @@ img {
   gap: 24px;
   justify-content: center;
   margin-bottom: 72px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -444,6 +458,8 @@ img {
   padding: 12px 24px;
   border: 1px solid var(--color-cornflower);
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -479,30 +495,44 @@ img {
   cursor: pointer;
   border-radius: 0px 0px 4px 4px;
 }
-.portfolio-box {
-  position: relative;
-}
-.portfolio-window:focus,
-.portfolio-window:hover {
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
 }
 
-.portfolio-window {
+.portfolio-box {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: start;
   position: absolute;
+  top: 0;
   bottom: 0;
+  transform: translateY(100%);
   width: 100%;
-  height: 50%;
+  height: 100%;
+  background-color: var(--color-iris);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   padding-top: 40px;
   padding-left: 32px;
   padding-bottom: 164px;
   padding-right: 32px;
-  background-color: var(--color-iris);
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: var(--color-cloud);
   text-align: left;
 }
+.overlay-portfolio {
+}
+
 .portfolio-link {
   display: block;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -587,6 +617,8 @@ img {
   background-color: var(--color-iris);
   border-radius: 50%;
   fill: var(--color-cloud);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
