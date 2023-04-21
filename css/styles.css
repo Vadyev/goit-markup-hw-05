@@ -213,6 +213,11 @@ img {
   z-index: var(--modal-idx);
   background-color: var(--color-cornflower);
 }
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 .modal {
   position: absolute;
   top: calc(50%-228px);
@@ -224,6 +229,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 24px;
+  transform: opacity;
 }
 .modal-btn {
   display: block;
