@@ -249,9 +249,14 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 24px;
   height: 24px;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover {
   cursor: pointer;
+  background-color: var(--color-ocean);
+  fill: var(--color-white);
 }
 
 /* Our advantages */
@@ -542,8 +547,10 @@ img {
   cursor: pointer;
   border-radius: 0px 0px 4px 4px;
 }
-.portfolio-item:focus,
-.portfolio-item:hover .overlay {
+.portfolio-link:hover .overlay {
+  transform: translateY(0);
+}
+.portfolio-link:focus .overlay {
   transform: translateY(0);
 }
 
