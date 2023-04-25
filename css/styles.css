@@ -559,9 +559,6 @@ img {
   overflow: hidden;
 }
 .overlay {
-  display: flex;
-  align-items: center;
-  justify-content: start;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -572,16 +569,18 @@ img {
   transition: transform 700ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.overlay-portfolio {
   padding-top: 40px;
   padding-left: 32px;
   padding-bottom: 164px;
   padding-right: 32px;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: var(--color-cloud);
-  text-align: left;
+  text-align: center;
 }
-
 .portfolio-link {
   display: block;
   transition-property: box-shadow;
